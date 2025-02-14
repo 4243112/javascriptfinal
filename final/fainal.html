@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神経衰弱ゲーム</title>
+    <link rel="stylesheet" href="fainal.css">
+</head>
+<body>
+    <h1>神経衰弱ゲーム</h1>
+    <label for="player-name">名前を入力してください:</label>
+    <input type="text" id="player-name" placeholder="名前">
+    <label for="difficulty">難易度を選んでください:</label>
+    <select id="difficulty">
+        <option value="easy">簡単</option>
+        <option value="medium">普通</option>
+        <option value="hard">難しい</option>
+    </select>
+    <button id="start-button" >ゲーム開始</button>
+    <div id="timer">タイマー: 00:00</div>
+    <button id="reset-button">リセット</button>
+    <button id="pause-button">一時停止</button>
+
+    <div id="game-board"></div>
+    <div id="clear-message"></div>
+
+    <div id="leaderboard" class="sidebar"></div> <!-- 修正: サイドバーとしてランキング表示 -->
+
+    <script src="fainal.js"></script>
+</body>
+</html>
