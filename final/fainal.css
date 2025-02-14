@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('img/haikei.png'); /* 背景画像を設定 */
+    background-size: cover;  /* 背景画像をカバーに設定 */
+    background-repeat: no-repeat;  /* 背景画像をリピートしない */
+    background-position: center center;  /* 背景画像を中央に配置 */
+    background-attachment: fixed;  /* 背景画像を固定 */
+    /* height: 100vh; 背景画像が切れないように全体の高さを設定 */
+    margin: 0;  /* 余白をリセット */
+    padding: 0; /* パディングをリセット */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black; /* デフォルトの文字色を白に設定 */
+}
+
+.sidebar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* フォントを変更 */
+    color: #ff6347; /* 鮮やかな文字色 */
+    text-shadow: 2px 2px 4px #000000; /* テキストの影 */
+}
+
+label, #timer, #clear-message, #leaderboard h2 {
+    font-family: 'Verdana', sans-serif; /* フォントを変更 */
+    color: #4caf50; /* テキスト色を緑に設定 */
+    text-shadow: 1px 1px 2px #000000; /* テキストの影 */
+}
+
+#game-board {
+    display: grid;
+    gap: 10px;  /* カード間のギャップをさらに狭く */
+    margin-top: 20px;
+    justify-content: center;
+    background-color: rgba(0, 128, 0, 0.5);  /* ゲームボードの背景色を半透明の緑に設定 */
+    padding: 10px;  /* ゲームボード全体の余白を設定 */
+    border-radius: 10px;  /* 角を丸める */
+}
+
+.card {
+    width: 95px;  /* カードの幅を少し小さく */
+    height: 130px;  /* カードの高さを少し小さく */
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-image: url('img/cover.png'); /* カード裏側の画像を設定 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.2s; /* ホバー時のアニメーション */
+}
+
+.card:hover {
+    transform: scale(1.1); /* カードを少し大きくする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ボックスシャドウを追加 */
+}
+
+.flipped {
+    background-color: white;
+    background-image: none; /* フリップ時に背景画像を消す */
+}
