@@ -115,7 +115,7 @@ function resetGame() {
     clearInterval(timer);  // タイマーを停止
     elapsedPausedTime = 0;  // 一時停止時間をリセット
     document.getElementById('timer').textContent = `タイマー: 00:00`;  // タイマー表示をリセット
-    resetGameState();
+    resetGameState();  // ゲーム状態をリセット
 }
 
 function resetGameState() {
